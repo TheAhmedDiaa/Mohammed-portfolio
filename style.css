@@ -423,9 +423,7 @@ ul { list-style: none; }
   padding: 0 clamp(1.5rem, 5vw, 4rem);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 1.1rem;
 }
 
 @media (min-width: 1400px) {
@@ -441,10 +439,18 @@ ul { list-style: none; }
 
 .skill-card {
   background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
   padding: clamp(1.6rem, 3vw, 2.2rem) clamp(1.3rem, 2.5vw, 1.8rem);
   min-width: 0;
   display: flex;
   flex-direction: column;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.skill-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
 }
 
 .skill-card h3, .skill-card p {
